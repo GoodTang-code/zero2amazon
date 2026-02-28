@@ -27,7 +27,7 @@ Automation Workflow ที่จะทำให้คุณเป็นบรร
   </a>
   <br>
   <a href="https://www.amazon.com/dp/B0GQGMXVH4?ref_=ast_author_dp_rw&th=1&psc=1&dib=eyJ2IjoiMSJ9.oRdY2xiWxFQ5HBQCBUPAYOP1RCSj62uiM5ur7H1_aZDGjHj071QN20LucGBJIEps.oxny24w1c7XYwBRyiEt6SVCMuZEWC49w_bgsjqjV7J0&dib">
-    <img src="docs/book_2.png" alt="Zero-2-Amazon Logo"/>
+    <img src="docs/book_1.png" alt="Zero-2-Amazon Logo"/>
   </a>
 </p>
 
