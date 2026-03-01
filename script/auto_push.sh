@@ -140,6 +140,7 @@ done
 
 git add \
   README.md \
+  package.json \
   "${ENCRYPT_TARGETS[@]}" \
   script/ \
   note/

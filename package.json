@@ -1,0 +1,7 @@
+{
+  "name": "zero-2-amazon",
+  "private": true,
+  "scripts": {
+    "auto_push": "bash script/auto_push.sh"
+  }
+}
