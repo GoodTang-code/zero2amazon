@@ -16,7 +16,6 @@ Draft → revise loops → consistency check →
 format → EPUB → publish
 
 # auto push with encrypt
-AUTO_PUSH_ENCRYPT_KEY="your-secret" npm run auto_push "commit" "0.0.1"
 AUTO_PUSH_ENCRYPT_KEY="your-secret" npm run auto_push -- "update:decrypt process" "1.0.0"
 
 
