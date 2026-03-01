@@ -1,89 +1,65 @@
-# WRITING LOOP (ต่อบท)
-
-## 1) Workspace Setup
-- [ ] สร้างโฟลเดอร์หลัก `07_manuscript/` (ถ้ายังไม่มี)
-- [ ] สร้าง `07_manuscript/manuscript-en/`
-- [ ] สร้าง `07_manuscript/manuscript-th/`
-- [ ] สร้าง `07_manuscript/chapter-revision-notes/`
-- [ ] สร้าง `00_process/writing_loop_log.md`
-- [ ] สร้าง `00_process/continuity_control.md`
-
----
-
-## 2) Mandatory Pre-Check Before Writing
-
-ต้องอ่านและยืนยันความสอดคล้องกับไฟล์ source of truth ก่อนเริ่มทุกบท:
-- `01_story_bible/story_overview.md`
-- `01_story_bible/writing_rules.md`
-- `01_story_bible/glossary.md`
-- `01_story_bible/timeline_master.md`
-- `03_characters/voice_sheet.md`
-- `06_chapter_blueprints/chapter_concepts.md`
-
-Checklist:
-- [ ] story direction confirmed
-- [ ] writing rules confirmed
-- [ ] glossary naming confirmed
-- [ ] timeline constraints confirmed
-- [ ] voice consistency references ready
-
----
-
-## 3) Chapter Loop (ใช้ซ้ำทุกบท)
-
-For chapter `XX`:
-- [ ] Blueprint review จาก `06_chapter_blueprints/chapter_concepts.md`
-- [ ] Draft EN ที่ `07_manuscript/manuscript-en/chXX.md`
-- [ ] Expansion pass (เป้าคำตามแผนบทนั้น, tolerance ±10%)
-- [ ] Polish pass (readability/dialogue/tension/continuity)
-- [ ] TH companion ที่ `07_manuscript/manuscript-th/chXX.md` (ถ้าทำ bilingual)
-- [ ] เขียนบันทึกแก้ไขบทที่ `07_manuscript/chapter-revision-notes/chXX-revision.md`
-- [ ] อัปเดต `00_process/word_count_log.md`
-- [ ] อัปเดต `00_process/writing_loop_log.md` (สถานะ, ปัญหา, next action)
-
-Chapter quality checks:
-- [ ] voice ผ่านตาม `03_characters/voice_sheet.md`
-- [ ] ชื่อ/คำศัพท์ผ่าน `01_story_bible/glossary.md`
-- [ ] timeline ไม่ชน `01_story_bible/timeline_master.md`
-- [ ] chapter purpose/reveal/escalation ตรง blueprint
-
-Chapter Gate (USER REVIEW REQUIRED):
-- [ ] ส่ง chapter ให้ user review
-- [ ] เก็บ comments/revision requests
-- [ ] ปรับแก้ตาม feedback
-- [ ] user approved chapter lock
-
----
-
-## 4) Continuity Control (ทุก 3 บท หรือเมื่อมีเหตุการณ์ใหญ่)
-
-อัปเดต `00_process/continuity_control.md`:
-- [ ] timeline logic
-- [ ] injury continuity
-- [ ] world/system rule consistency
-- [ ] vocabulary consistency
-- [ ] unresolved threads tracker
-
-ถ้าพบ conflict:
-- [ ] update bible ก่อน (source of truth)
-- [ ] แล้วค่อย revise manuscript chapters
-
----
-
-## 5) Act Gate (USER REVIEW REQUIRED)
-
-เมื่อจบ Act I / Act II / Act III:
-- [ ] สรุปสถานะ act และความเสี่ยง
-- [ ] ขอ user review + comments
-- [ ] ปรับแก้ระดับ act
-- [ ] user approved act
-- [ ] อัปเดต `00_process/project_progress.md`
-
----
-
-## 6) Writing Completion Criteria
-- [ ] Act I written and approved
-- [ ] Act II written and approved
-- [ ] Act III written and approved
-- [ ] full manuscript completed in `07_manuscript/`
-- [ ] word count log complete and current total verified
+__AUTO_PUSH_ENCRYPTED_V1__
+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

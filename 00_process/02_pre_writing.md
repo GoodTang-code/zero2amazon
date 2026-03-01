@@ -1,718 +1,349 @@
-# Writing Process Bible
-## Idea-First Novel Pipeline (80K Words)
-
----
-
-## PROJECT OVERVIEW
-
-**Target Length:** 80,000 words  
-**Current Mode:** Theme-free ideation first  
-**Rule:** Do NOT lock genre/tone/theme in early stages
-
-**Core Principle:**
-First create a large pool of raw, high-potential ideas without forcing horror/thriller/sci-fi.
-Genre, tone, and theme are chosen later from the strongest concept.
-
----
-
-## HOW TO USE THIS BIBLE
-
-This document defines the full pipeline.
-
-At each stage AI must:
-
-1. Generate  
-2. Analyze  
-3. Score  
-4. Critique  
-5. Revise  
-6. Validate consistency  
-7. Save outputs  
-8. Produce checklist result
-
----
-
-## OUTPUT FILE MAP
-
-```
-01_story_bible/
-  story_overview.md
-  mood_tone_style.md
-  writing_rules.md
-  glossary.md
-  timeline_master.md
-
-02_premise/
-  what_if_seeds.md
-  selected_premise.md
-  promise_of_premise.md
-
-03_characters/
-  character_book.md
-  relationships_map.md
-  voice_sheet.md
-
-04_world_rules/
-  setting_world.md
-  rules_constraints.md
-
-05_plot/
-  plot_arc_master.md
-  twists_reversals.md
-  escalation_ladder.md
-
-06_chapter_blueprints/
-  chapter_concepts.md
-```
-
----
-
-## CORE AI LOOP
-
-GENERATE → ANALYZE → SCORE → CRITIQUE → REVISE → VALIDATE → SAVE → CHECKLIST
-
----
-
-## SCORING SCALE
-
-1 = weak  
-3 = acceptable  
-5 = exceptional
-
----
-
-# STAGE 1 — เครื่องสร้างพล็อตตั้งต้น (Premise Engine: Theme-Free)
-
-## STEP 1.1 สร้าง What-If Seeds
-
-**Output:** `02_premise/what_if_seeds.md`
-
-ข้อกำหนด (Requirements):
-- 100 ไอเดีย
-- ไอเดียละ 1 ประโยค
-- อ่านแล้วเข้าใจทันที
-- ไม่จำกัดแนว (Genre)
-- ไม่จำกัดโทน (Tone)
-- ทุกไอเดียต้องมีจุดเปลี่ยน (Trigger/Change) ชัดเจน
-- ต้องมีการเปลี่ยนแปลงต่อโลกจริงหรือประสบการณ์มนุษย์
-
-ตัวอย่างรูปแบบ Seed ที่ใช้ได้:
-- “อยู่ดี ๆ โหลดแอพที่สั่งของได้ทุกอย่างภายใน 2 วินาที”
-- “วันหนึ่งทุกคนได้ยินความคิดของคนที่รักเพียงหนึ่งประโยคต่อวัน”
-
-เช็กลิสต์ (Checklist):
-- [ ] สร้างครบ 100 ไอเดีย
-- [ ] ตรวจความชัดเจนแล้ว
-- [ ] ไม่มีอคติบังคับแนวเรื่อง
-
----
-
-## STEP 1.2 ให้คะแนนศักยภาพขายและการขยายเรื่อง (Sellability & Expansion Score)
-
-ให้คะแนนทุกไอเดีย (1–5):
-
-- ความชัดของ Hook
-- พลังดึงความอยากรู้ (Curiosity Pull)
-- ศักยภาพขยายเป็นนิยายยาว (Expansion Potential)
-- ศักยภาพแรงกดดันต่อตัวละคร (Character Pressure)
-- ศักยภาพความขัดแย้ง (Conflict Potential)
-- แรงสะเทือนทางอารมณ์ (Emotional Resonance)
-- ศักยภาพเชิงตลาด (Market Appeal)
-
-**Output:** `02_premise/selected_premise.md`
-
-เช็กลิสต์ (Checklist):
-- [ ] คัด Top 10 เรียบร้อย
-- [ ] มีคะแนนครบ
-- [ ] คงความหลากหลายของช่วงไอเดีย
-
----
-
-## STEP 1.3 แปลง Seed เป็น Premise Draft
-
-แปลง Seed ที่ผ่านการคัดเลือกเป็น Premise แบบสั้น
-แต่ละ Premise ต้องมี:
-- ตัวละครหลักหรือมุมมองหลัก
-- เหตุเปลี่ยนเกม (Disruptive Change)
-- แรงกดดันหรือเดิมพันทันที (Immediate Pressure / Stakes)
-Output: `02_premise/premise_drafts.md`
-
-เช็กลิสต์ (Checklist):
-- [ ] แปลงครบทุก Seed ที่คัดไว้
-- [ ] มีแรงกดดันเชิงเรื่องเล่า
-- [ ] มุมมองตัวเอกชัดเจน
- 
----
-
-## STEP 1.4 แจ้งเตือนการเลือก Premise (ต้องให้ผู้ใช้ตัดสินใจ)
-
-NOTICE TO USER:
-- รีวิวตัวเลือกทั้งหมดใน `02_premise/premise_drafts.md`
-- เทียบกับคะแนนใน `02_premise/selected_premise.md`
-- เลือก Final Premise เพียง 1 ตัวก่อนดำเนินการต่อ
-
-ข้อมูลที่ต้องรับจากผู้ใช้:
-- ID/หมายเลข Premise ที่เลือก
-- เหตุผลประกอบ (ถ้ามี) 1-3 บรรทัด
-
-Output หลังผู้ใช้ยืนยัน:
-- อัปเดต `02_premise/selected_premise.md` ด้วยผู้ชนะ
-- ทำเครื่องหมายตัวที่เลือกเป็น `FINAL PREMISE`
-
-เช็กลิสต์ (Checklist):
-- [ ] ผู้ใช้เลือก Final Premise แล้ว
-- [ ] บันทึก Final Premise ใน `02_premise/selected_premise.md` แล้ว
-- [ ] พร้อมไป Step 1.5
-
----
-
-## STEP 1.5 เลือกธีมเรื่อง (Story Theme Selection: USER DECISION REQUIRED)
-
-NOTICE TO USER:
-- เลือกธีมหลักของเรื่องสำหรับ Final Premise
-- ธีมต้องนิยามคำถามมนุษย์หลักที่เรื่องจะสำรวจ
-- เขียนให้สั้นและชัดเจน (1 thematic statement)
-
-ข้อมูลที่ต้องรับจากผู้ใช้:
-- ธีมหลัก (1 ประโยค)
-- ธีมรอง (ถ้ามี, 1 ประโยค)
-- ข้อจำกัดธีมที่ต้องหลีกเลี่ยง
-
-Output หลังผู้ใช้ยืนยัน:
-- บันทึกธีมที่เลือกลง `02_premise/promise_of_premise.md`
-- เพิ่มบันทึกธีมใน `01_story_bible/story_overview.md` ส่วน direction inputs
-
-เช็กลิสต์ (Checklist):
-- [ ] ผู้ใช้เลือกธีมหลักแล้ว
-- [ ] บันทึกธีมใน `02_premise/promise_of_premise.md` แล้ว
-- [ ] บันทึกทิศทางธีมใน `01_story_bible/story_overview.md` แล้ว
-- [ ] พร้อมไป Stage 2
-
----
-
-# STAGE 2 — สัญญาของ Premise (Promise of the Premise: ยังเปิดทางเลือก)
-
-Output: `02_premise/promise_of_premise.md`
-
-Pre-check (ต้องทำก่อนเขียน Output Stage 2):
-- อ่าน `01_story_bible/story_overview.md` ก่อน
-- ยืนยันว่าธีมจาก Step 1.5 สะท้อนอยู่ใน direction notes แล้ว
-- อ่าน `01_story_bible/writing_rules.md` และคุมสไตล์ให้สอดคล้อง
-
-Include:
-
-### Market Hook (1 sentence)
-
-### Reader Experience
-ผู้อ่านจะรู้สึกอะไร และอะไรทำให้อยากอ่านต่อ (Keep Turning Pages)?
-
-### Core Question
-Premise นี้กำลังตั้งคำถามชีวิต/มนุษย์เรื่องอะไร?
-
-### Unique Pleasure
-อะไรคือความเพลิดเพลินเฉพาะตัวที่ทำให้เรื่องนี้ติดหนึบ?
-
-### Stakes Pressure
-ถ้าตัวเอกล้มเหลว อะไรจะเสียหาย?
-
-### Momentum Engine
-ทำไมเรื่องจะยกระดับความเข้มข้นได้เองตามธรรมชาติ?
-
-### Must-Deliver Moments (5–8)
-
-เช็กลิสต์ (Checklist):
-- [ ] pre-check กับ `01_story_bible` ครบแล้ว
-- [ ] ธีมที่เลือกสะท้อนอย่างสม่ำเสมอ
-- [ ] อารมณ์หลักชัดเจน
-- [ ] สัญญาเรื่องแรงส่งการเล่าเรื่องชัด
-- [ ] มี escalation ในตัว
-- [ ] ยังเปิดพื้นที่การตีความเชิงธีม
-
----
-
-## STAGE 2.5 — กล่องทดลองแรงยกระดับเหตุการณ์ (Escalation Sandbox)
-
-**Output:** `01_story_bible/escalation_sandbox.md`
-
-สร้าง 20 เหตุการณ์/ผลลัพธ์ที่มีความเป็นไปได้และเกิดจาก Premise ที่เลือก
-
-ต้องมีสัดส่วนผสมของ:
-- normal everyday use
-- emotional use
-- system exploitation
-- unintended consequences
-- societal effects
-- paradoxes or glitches
-- irreversible outcomes
-
-กติกา:
-- เขียนแต่ละเหตุการณ์ให้สั้น กระชับ และเห็นภาพ
-
-เช็กลิสต์ (Checklist):
-- [ ] สร้างครบ 20 เหตุการณ์
-- [ ] ครบทุกหมวดที่กำหนด
-- [ ] ผลลัพธ์น่าเชื่อถือและยกระดับต่อเนื่อง
-- [ ] บันทึกลง `01_story_bible/escalation_sandbox.md` แล้ว
-
----
-
-## STEP 2.6 — ให้ผู้ใช้เลือกเหตุการณ์จาก Escalation Sandbox (USER DECISION REQUIRED)
-
-NOTICE TO USER:
-- รีวิวเหตุการณ์ใน `01_story_bible/escalation_sandbox.md`
-- เลือกเหตุการณ์/ผลลัพธ์ที่ต้องการนำไปใช้ต่อ
-- ให้ความสำคัญกับเหตุการณ์ที่สร้างแรงกดดัน, Reversal, และผลกระทบระยะยาว
-
-ข้อมูลที่ต้องรับจากผู้ใช้:
-- ID/หมายเลขเหตุการณ์ที่เลือก
-- เหตุผลประกอบ (ถ้ามี) ว่าทำไมสำคัญ
-
-Output หลังผู้ใช้ยืนยัน:
-- บันทึกเหตุการณ์ที่เลือกใน `05_plot/twists_reversals.md`
-- ทำเครื่องหมายแต่ละรายการเป็น `USER-SELECTED FROM STAGE 2.5`
-
-เช็กลิสต์ (Checklist):
-- [ ] ผู้ใช้เลือกเหตุการณ์จาก sandbox แล้ว
-- [ ] บันทึกเหตุการณ์ที่เลือกใน `05_plot/twists_reversals.md` แล้ว
-- [ ] ชุดที่เลือกนำไปใช้ต่อในงานออกแบบ Twist/Reversal ได้
-
----
-
-# STAGE 3 — ล็อกทิศทางเรื่อง (Story Direction Lock)
-
-**Output:** `01_story_bible/story_overview.md`
-
-ตอนนี้ (และควรเป็นตอนนี้เท่านั้น) ให้เลือกทิศทางเรื่อง:
-- Genre blend (e.g. thriller, sci-fi, drama, mystery, satire, romance, etc.)
-- Tone (dark, hopeful, absurd, intimate, epic, etc.)
-- Theme priority
-
-ต้องมี (Include):
-- Logline
-- One paragraph summary
-- Chosen genre + why it fits this premise
-- Themes
-- Tone & Mood
-- Setting snapshot
-- Core conflict
-- Ending type
-
-เกณฑ์ให้คะแนน (Score):
-- clarity
-- novelty
-- emotional weight
-- market appeal
-- conflict strength
-- coherence with selected premise
-
-เช็กลิสต์ (Checklist):
-- [ ] การล็อกแนว/โทนมีเหตุผลสอดคล้องกับ Premise
-- [ ] ไม่มีความไม่เข้ากันระหว่างคอนเซ็ปต์กับ lane ที่เลือก
-
-ด่านสุดท้าย (Final Gate: USER REVIEW REQUIRED):
-- ขอให้ผู้ใช้รีวิวผลลัพธ์ Stage 3 ใน `01_story_bible/story_overview.md`
-- ขอความคิดเห็น (Comments) หรือรายการแก้ไข (Requested Changes)
-- ขออนุมัติ (Approve) ก่อนดำเนินการต่อ
-
-เช็กลิสต์อนุมัติ (Approval Checklist):
-- [ ] user review requested
-- [ ] user comments captured (or explicitly none)
-- [ ] user approved Stage 3
-
----
-
-# STAGE 4 — ออกแบบโลกเรื่อง (World Design)
-
-## ฉากหลังและโครงสร้างสังคม (Setting & Society)
-
-**Output:** `04_world_rules/setting_world.md`
-
-ต้องมี (Include):
-- environment
-- power structures
-- social order
-- technology level (if relevant)
-- institutions that shape conflict
-
-เช็กลิสต์ (Checklist):
-- [ ] โลกที่สร้างขึ้นก่อแรงกดดันให้เรื่องได้จริง
-
----
-
-## กฎและข้อจำกัดของระบบ (Rules & Constraints: CRITICAL)
-
-**Output:** `04_world_rules/rules_constraints.md`
-
-ต้องมี (Include):
-- system CAN
-- system CANNOT
-- costs
-- side effects
-- loopholes
-- breaking point
-
-ทำ Stress-test โดยจำลองมุมมอง:
-- opportunist
-- authority
-- criminal actor
-- desperate ordinary person
-
-เช็กลิสต์ (Checklist):
-- [ ] กฎมีความสอดคล้องภายใน
-- [ ] สถานการณ์การใช้ผิดทางสมเหตุสมผล
-- [ ] ความขัดแย้งยังเดินหน้าต่อได้
-
-ด่านสุดท้าย (Final Gate: USER REVIEW REQUIRED):
-- ขอให้ผู้ใช้รีวิวผลลัพธ์ Stage 4 ใน `04_world_rules/setting_world.md` และ `04_world_rules/rules_constraints.md`
-- ขอความคิดเห็น (Comments) หรือรายการแก้ไข (Requested Changes)
-- ขออนุมัติ (Approve) ก่อนดำเนินการต่อ
-
-เช็กลิสต์อนุมัติ (Approval Checklist):
-- [ ] user review requested
-- [ ] user comments captured (or explicitly none)
-- [ ] user approved Stage 4
-
----
-
-# STAGE 5 — คุมมู้ดและโทน (Mood & Tone Control)
-
-**Output:** `01_story_bible/mood_tone_style.md`
-
-ต้องมี (Include):
-- emotional palette
-- pacing rhythm
-- sensory atmosphere
-- tension style
-- descriptive density
-
-เช็กลิสต์ (Checklist):
-- [ ] โทนเรื่องสอดคล้องกับ lane ที่เลือก
-
----
-
-## STAGE 5.5 — สร้างกติกาการเขียน (Writing Rules Build)
-
-**Output:** `01_story_bible/writing_rules.md`
-
-กำหนดและล็อกกติกาการเขียนเพื่อคุมความสม่ำเสมอระหว่าง Draft
-
-ต้องมี (Include):
-- narrative POV rule
-- tense rule
-- dialogue formatting rule
-- paragraph length guideline
-- scene rhythm guideline
-- tone boundary (what to avoid)
-- language register guide (narration vs dialogue)
-
-เช็กลิสต์ (Checklist):
-- [ ] กติกาเป็นรูปธรรมและตรวจได้
-- [ ] สอดคล้องกับทิศทางมู้ด/โทน
-- [ ] บันทึกลง `01_story_bible/writing_rules.md` แล้ว
-
-ด่านสุดท้าย (Final Gate: USER REVIEW REQUIRED):
-- ขอให้ผู้ใช้รีวิวผลลัพธ์ Stage 5.5 ใน `01_story_bible/writing_rules.md`
-- ขอความคิดเห็น (Comments) หรือรายการแก้ไข (Requested Changes)
-- ขออนุมัติ (Approve) ก่อนดำเนินการต่อ
-
-เช็กลิสต์อนุมัติ (Approval Checklist):
-- [ ] user review requested
-- [ ] user comments captured (or explicitly none)
-- [ ] user approved Stage 5.5
-
----
-
-# STAGE 6 — ออกแบบสถาปัตยกรรมตัวละคร (Character Architecture)
-
-## หนังสือตัวละคร (Character Book)
-
-**Output:** `03_characters/character_book.md`
-
-สำหรับตัวละครแต่ละตัว ต้องมี:
-- role
-- psychological wound (if applicable)
-- desire
-- fear
-- secret
-- survival instinct
-- moral breaking point
-- arc transformation
-- voice pattern
-
-เช็กลิสต์ (Checklist):
-- [ ] มีความขัดแย้งภายใน
-- [ ] มีศักยภาพการเปลี่ยนแปลง
-
----
-
-## แผนที่ความขัดแย้งความสัมพันธ์ (Relationship Conflict Map)
-
-**Output:** `03_characters/relationships_map.md`
-
-ต้องมี (Include):
-- leverage
-- emotional asymmetry
-- betrayal paths
-- dependency chains
-
-เช็กลิสต์ (Checklist):
-- [ ] ยืนยันศักยภาพความขัดแย้งแล้ว
-
-ด่านสุดท้าย (Final Gate: USER REVIEW REQUIRED):
-- ขอให้ผู้ใช้รีวิวผลลัพธ์ Stage 6 ใน `03_characters/character_book.md` และ `03_characters/relationships_map.md`
-- ขอความคิดเห็น (Comments) หรือรายการแก้ไข (Requested Changes)
-- ขออนุมัติ (Approve) ก่อนดำเนินการต่อ
-
-เช็กลิสต์อนุมัติ (Approval Checklist):
-- [ ] user review requested
-- [ ] user comments captured (or explicitly none)
-- [ ] user approved Stage 6
-
----
-
-## STAGE 6.5 — สร้างอภิธานศัพท์ (Glossary Build)
-
-**Output:** `01_story_bible/glossary.md`
-
-สร้างอภิธานศัพท์กลางหลังชื่อเฉพาะของตัวละคร/โลกเริ่มนิ่งแล้ว
-
-ต้องมี (Include):
-- character names (official spelling + short reference)
-- organization/platform/institution names
-- location names
-- recurring terms and in-world jargon
-- prohibited variants or inconsistent spellings
-
-เช็กลิสต์ (Checklist):
-- [ ] ครอบคลุมคำสำคัญและชื่อหลัก
-- [ ] การตั้งชื่อสอดคล้องกับไฟล์ story/world
-- [ ] มีรายการรูปแบบคำที่ห้ามใช้
-- [ ] บันทึกลง `01_story_bible/glossary.md` แล้ว
-
-ด่านสุดท้าย (Final Gate: USER REVIEW REQUIRED):
-- ขอให้ผู้ใช้รีวิวผลลัพธ์ Stage 6.5 ใน `01_story_bible/glossary.md`
-- ขอความคิดเห็น (Comments) หรือรายการแก้ไข (Requested Changes)
-- ขออนุมัติ (Approve) ก่อนดำเนินการต่อ
-
-เช็กลิสต์อนุมัติ (Approval Checklist):
-- [ ] user review requested
-- [ ] user comments captured (or explicitly none)
-- [ ] user approved Stage 6.5
-
----
-
-## STAGE 6.6 — สร้างชีตน้ำเสียงตัวละคร (Voice Sheet Build)
-
-**Output:** `03_characters/voice_sheet.md`
-
-สร้างกรอบคุมน้ำเสียงตัวละครสำหรับงานเขียนยาว (Long-form Draft)
-
-สำหรับตัวละครหลักแต่ละตัว ต้องมี:
-- Core voice DNA (sentence rhythm, language register, favorite phrasing)
-- Do/Don't language patterns
-- Emotional modes: normal / pressure / conflict / vulnerable
-- 8-12 sample lines in-character
-- Interaction contrast with key counterpart(s)
-- Drift checks (signals that voice is going off-character)
-
-เช็กลิสต์ (Checklist):
-- [ ] โปรไฟล์เสียงตัวละครครบทุกตัวหลัก
-- [ ] โหมดอารมณ์แยกชัดและใช้ได้จริงในฉาก
-- [ ] ตัวอย่างบทพูดมีเอกลักษณ์และทำซ้ำได้
-- [ ] กำหนดเกณฑ์ตรวจเสียงหลุด (Drift Check) สำหรับรอบแก้
-- [ ] บันทึกลง `03_characters/voice_sheet.md` แล้ว
-
-ด่านสุดท้าย (Final Gate: USER REVIEW REQUIRED):
-- ขอให้ผู้ใช้รีวิวผลลัพธ์ Stage 6.6 ใน `03_characters/voice_sheet.md`
-- ขอความคิดเห็น (Comments) หรือรายการแก้ไข (Requested Changes)
-- ขออนุมัติ (Approve) ก่อนดำเนินการต่อ
-
-เช็กลิสต์อนุมัติ (Approval Checklist):
-- [ ] user review requested
-- [ ] user comments captured (or explicitly none)
-- [ ] user approved Stage 6.6
-
----
-
-# STAGE 7 — ออกแบบการยกระดับพล็อต (Plot Escalation Design)
-
-## แม่แบบโค้งพล็อตหลัก (Plot Arc Master)
-
-**Output:** `05_plot/plot_arc_master.md`
-
-ต้องมี (Include):
-- inciting disturbance
-- irreversible decision
-- midpoint shift
-- truth revelation
-- collapse moment
-- climax choice
-- resolution cost
-
-เช็กลิสต์ (Checklist):
-- [ ] เดิมพันยกระดับต่อเนื่อง
-- [ ] มีผลลัพธ์ที่ย้อนกลับไม่ได้
-
----
-
-## บันไดการยกระดับเหตุการณ์ (Escalation Ladder)
-
-**Output:** `05_plot/escalation_ladder.md`
-
-กำหนด 6 ระดับที่เหมาะกับแนว/โทนที่เลือก
-(ไม่บังคับโทน dread เว้นแต่เป็น lane ที่เลือกจริง)
-
----
-
-## คลัง Twist และ Reversal
-
-**Output:** `05_plot/twists_reversals.md`
-
-ใส่ Reversal ที่เหมาะกับ lane ที่เลือก
-
-เช็กลิสต์ (Checklist):
-- [ ] มีทั้งความเซอร์ไพรส์และความหลีกเลี่ยงไม่ได้
-- [ ] มีแรงกระทบทางอารมณ์
-
----
-
-## STAGE 7.5 — ออกแบบโลกของคนตัวเล็ก (Small-World Design: Clusters + Anchors + Micro-Arcs)
-
-**Output:** `03_characters/small_world_design.md`
-
-โลกที่มีชีวิตจริง = โลกที่คนตัวเล็กมีชีวิตของตัวเอง
-
-ต้องมี (Include):
-1) Purpose ของกลุ่มตัวละครรอง  
-2) Character Clusters (ออกแบบเป็น “กลุ่ม”)  
-3) Individual Anchors (ตัวแทนที่คนอ่านจำได้)  
-4) Micro-Arcs (เส้นเรื่องเล็ก ๆ)  
-5) Recurring Appearances Strategy  
-6) Scene Flavor Roles  
-7) Hidden Utility Roles
-
-เช็กลิสต์ (Checklist):
-- [ ] ระบุบทบาทกลุ่มตัวละครรองชัดเจน
-- [ ] ทำแผนที่ Character Clusters พร้อมหน้าที่
-- [ ] กำหนด Individual Anchors ที่จดจำได้
-- [ ] Micro-Arcs เชื่อมกับแรงกดดันพล็อตหลัก
-- [ ] วางแผนการกลับมาของตัวละคร (Recurring Appearances)
-- [ ] กำหนดทั้ง Scene Flavor Roles และ Hidden Utility Roles
-- [ ] บันทึกลง `03_characters/small_world_design.md` แล้ว
-
-ด่านสุดท้าย (Final Gate: USER REVIEW REQUIRED):
-- ขอให้ผู้ใช้รีวิวผลลัพธ์ Stage 7 ใน `05_plot/plot_arc_master.md`, `05_plot/escalation_ladder.md`, `05_plot/twists_reversals.md` และ `03_characters/small_world_design.md`
-- ขอความคิดเห็น (Comments) หรือรายการแก้ไข (Requested Changes)
-- ขออนุมัติ (Approve) ก่อนดำเนินการต่อ
-
-เช็กลิสต์อนุมัติ (Approval Checklist):
-- [ ] user review requested
-- [ ] user comments captured (or explicitly none)
-- [ ] user approved Stage 7
-
----
-
-# STAGE 8 — CHAPTER CONCEPT MAP
-
-**Output:** `06_chapter_blueprints/chapter_concepts.md`
-
-Each chapter must include:
-- purpose
-- tension driver
-- reveal
-- escalation step
-- closing hook
-
-Checklist:
-- [ ] no passive chapters
-- [ ] forward momentum ensured
-
-Final Gate (USER REVIEW REQUIRED):
-- Ask user to review Stage 8 output in `06_chapter_blueprints/chapter_concepts.md`
-- Ask user for comments or requested changes
-- Ask user to approve before proceeding
-
-Approval checklist:
-- [ ] user review requested
-- [ ] user comments captured (or explicitly none)
-- [ ] user approved Stage 8
-
----
-
-## STAGE 8.5 — TIMELINE MASTER BUILD
-
-**Output:** `01_story_bible/timeline_master.md`
-
-Build master timeline after chapter concepts are mapped.
-
-Include:
-- chapter-to-day/week mapping
-- major events and causal order
-- character availability constraints
-- world/system events timeline
-- continuity checks (injury, travel, recovery, legal/public response timing)
-
-Checklist:
-- [ ] chapter flow mapped to timeline units
-- [ ] causality and sequence are coherent
-- [ ] continuity risks identified and resolved
-- [ ] output saved to `01_story_bible/timeline_master.md`
-
-Final Gate (USER REVIEW REQUIRED):
-- Ask user to review Stage 8.5 output in `01_story_bible/timeline_master.md`
-- Ask user for comments or requested changes
-- Ask user to approve before proceeding
-
-Approval checklist:
-- [ ] user review requested
-- [ ] user comments captured (or explicitly none)
-- [ ] user approved Stage 8.5
-
----
-
-# STAGE 9 — PRE-WRITE VALIDATION GATE
-
-Before writing begins:
-
-Premise:
-- [ ] clear, compelling, scalable
-
-World:
-- [ ] logical and pressure-generating
-
-Characters:
-- [ ] desire-driven and morally tested
-
-Plot:
-- [ ] escalates with meaningful consequences
-
-Twists:
-- [ ] inevitable yet surprising
-
-Chapter Map:
-- [ ] momentum guaranteed
-
----
-
-# AUTO CHECKLIST RESPONSE FORMAT
-
-When a stage completes:
-
-STAGE: <name>  
-STATUS: PASS / REVISION REQUIRED  
-CONSISTENCY: VERIFIED / ISSUES FOUND  
-NEXT STEP: <next stage>
-
----
-
-# QUALITY CHECK (GENRE-AGNOSTIC)
-
-If the story does NOT create:
-- strong curiosity
-- emotional investment
-- escalating consequences
-- character-changing pressure
-
-→ escalate and revise further.
-
----
+__AUTO_PUSH_ENCRYPTED_V1__
+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
+UYtmSHO2mVIUZp6pVq8gMo1nYNbRDD1JPUMaJWsYRisvmg39gDluo0vyctNe3t1Z
+k3CEYiYLghM66hZDL1UtFT/Tj6NC9LwbCjcW3lKDdthZdFNblzWbeH8UAIijwAPX
+ONM2ZaTRgVPsVeNpLRdHUvWf2CHAEggXyFlzqlMdT1CEVIA9Iq9pYUxq631ArUAm
+aK+iql38K+ep7TBd9aZsBSGQIs70keK2gIc3/U/YS3PO63pf/RqBd1FPLfiPFusv
+nFRmB9ShcxwMG6f6fu0txRVDF9zoP5Au8INMdLOe20e85lwvujyGoslQAA8fe08I
+PK2o9/hVq19GDmjIBSQ4Q+SrpBiPZ8NTv6YTVUKNsqi2PaNk+geWqFjknPxdGAUX
+5XSFedRqnuskWIPKJvQxYnvHzM7fcTP6xu8lQWyibdvgPe5QStndJakoOoBzAgr+
+OcnvMN82N7Y/OcrQA+1ktqtwXv4d7qqrzSDFG/wRObVvlvEAhz9cqlAUnMef/kMb
+x/4ft3qXdVFI3LBpJuaVv+adEw3Gn4jHfgXqxvP+D3GIKuOqhi+O+WYavUBPTG6D
+tzCjHolPxS24HiyomHCQBLzSOtIZYGKNnHdYbWV5NkVpc/YsHkwXXmnroZIodQZc
+KYg/B1as2kv7SOEABKLrdsC+EP42V0ZEXG8+LL6jTZJAqim1Lk1uw3n6gBOBQWtL
+HFYTs0kaB63uxNXzPgkzhKNM4qgkWE/PLDY5g1/F7sJ8TjtGGM3VmaVo0997Zc3R
+pyPK6cMAukK4XXeAF52l4agy846Qx+3c6k1ZKZ64EsBndF/766c7BtO5YPOajmHX
+P8q3RZDdoGLTTL01ows29E+zLBFqqtyTNBLeKoH33qMYk1cROl8j47Z3HSgERW33
+TDz7iqC9/JwvzC6ENi9K1vLkOVU80p5lMC43/NS0MKuy2yGNNI3U4MlOCiBLzEZk
+dMb3gKhFtioT2Nq0QOwyG7riFT16m8Svp4xGVhJNePR2MNyFSW9XlhzTLimqVWNR
+zmrd3HzcdjNPQWUMGGnQYxg7KUbmLKlw2j7L94SLVG4MOdkgXGUA+p8TMFqMi3Gl
+37OM7dSFYRQ1gG6tzIutPCzU7dCicEWK3Aet+eQCXQ/JqOWlEG4h6C62dd/yLI2D
+OH9WUq722QJvWI3t7IEhbsKudXUciwCnSdqeL2LwiBouR4CHlAj/A4XHqcEr1Jyw
+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

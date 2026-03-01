@@ -1,82 +1,27 @@
-# Novel from 0 to Amazon
-
-Hello Agent!
-
-This repository is a structured pipeline for producing a novel from idea to Amazon release.
-
-Your mission is to follow ALL instructions in:
-
-00_process/
-
-Execute steps sequentially and do not skip validation.
-
----
-
-## Core Rules
-
-### 1. Follow Process Files Exactly
-All tasks are defined in `00_process/`.
-
-### 2. Story Bible is the Single Source of Truth
-
-01_story_bible/
-
-All writing must remain consistent with its contents.
-
-If conflicts arise:
-1. update the bible
-2. revise the draft
-
-### 3. Validate After Every Step
-
-After completing each step you MUST:
-
-- validate outputs
-- check consistency
-- report issues
-- confirm readiness
-
-### 4. Preserve Existing Work
-
-Do not delete or overwrite files unless instructed.
-
----
-
-## Required Output Format
-
-[STEP COMPLETED]  
-Step: <name>  
-Status: PASS | REVISION REQUIRED  
-
-Files created/updated:
-- …
-
-Issues:
-- …
-
-Next step:
-- …
-
----
-
-## Start Here
-
-Begin with:
-
-00_process/00_setup
-
----
-
-## Workflow Philosophy
-
-This system ensures:
-
-✔ structural consistency  
-✔ tonal integrity  
-✔ controlled iteration  
-✔ publish-ready output  
-
----
-
-Current Status:
-Step 00 → Ready to execute
+__AUTO_PUSH_ENCRYPTED_V1__
+U2FsdGVkX1+3lEXMaEUexwgNAiYdLECGSwHR3XgoSwm+KwWPaRHQBhR1vUKjugaC
+JO//PoNFf0G579GFPt+tJt6QeGfg/RAmBsM0APd1cyJ6+1Q8AP8367hqN9n0BzEj
+oYxRhZB+AaTo9kYhVBhX25wmLLSvp4r6sahotkp4jDK1oQ3MEdWTEVM1pkYzgfa1
+i9zTbVd9wOR/bosGIfCu1sVoR/sY7JjvjOdFYJKWKUFVLHREW5ZSGiQkDlLzyHm/
+nj9+43i7iVxPNdVbC3AV/s9OSP1RLwsK1nq1WsDAvCe8Uma+4dGE8ogciZevJR1V
+gYdHTG9YaCeKqOsdamESVLG9pu3s8gW9mSynKxsl4P20fSf9U3Ul4jTkR6vmuqlr
+ETseTTU+1HzxeiiQhYFoqAmQqmlN2qDSM/ckCKxIxsWWKs6h9zA1m+z2YBSEOHbP
+qLGQwDnYTBmUGya9QIGxHy23KAv4uOxG0ahCsxeYEpkg78lhv4YoNN4FAIBNQj3p
+Xi+po5MziZ50Qf640SL2WrazxalfI6mzdwr3wg3254WOEL+srmregbz9t4JAQ51J
+a3zksAn3WTILl/BypNFMkiHEdgAptFdB1W/v2i94MuWcujtG9IsqYpiYM2M0Q5A4
+dHVRP+iAgrUek+he4FgwzPmUAe116BsJhMAJeiwxVeoyf4uinaUkFiZFQbXHhZB0
+Ifh5BSVqynt2xTNjRIwIYtkodq9w4c8VjPW3ocjtWSec6ddL1OzEFKZ8Uj70fou5
+MHsmMmdkAURfZ0D3Kam+qDlGYsZmQDtEQNc5MLVE+GuomBpz5Xy3LogXVRlGxF9F
+UhYP1eQoJMeNHvs+gZW2gyuUuqJqfvheEB5y3SUHoy+Cwg5eCX75bZbRvv0uwjRj
+0SpSk13t3hobboDQpZ45KTVN/JWpjoHkPH4UCxg0C25dUQ/1fxrZ9YIruPsEfENt
+eXI3vvuKk9cZh0p1vTT0x3MDFyaPcwBw/MmyOMHCxYoW+Vb7tSOMJV0onARZauOD
+JKbv1P4Cdra+scSOh1TdzMYQj3Vo6Y55Gfbik39SSmLWSFD8UUrOYeB/4RgX80tp
+/b81bWqo4M2Ul1NX9OXIngZtogoXrx/X9z6KrWPfnSYO41CQV1X22kakQPFfSg8r
+dAxxHJ2bknrQ3lB+XopTTv8LQjbk/H59s43OJKSeu0gx8N0iXVAAqe2+4hG8UaMs
+vz4Pwyx1OAmc58xoWKqTFnZ6jlUTRL/TtW6T8Yy3ovJkYiFWl3Sib+3K+CKiAdJ9
+vUceTcwHIcx9OIo9hUVNuEg6tJ7rneVooJj+7/wCLl20c1UTJIpDQe3b10VcJmfk
+Q4Fp5Ik/IHYCHMmxh4yPI4pkjoxWITXQCeoEqRJC/kjo1y26FG1o/E5p0uZAqSky
+9PC2yltjrvTeYHqJyXaDZ4ZguTB5wYoYBPFlJzFKVdPAtPWBqBDJieHuKh3yXT9e
+fanLajV7Xk/JUkq8n8fCCDBxZrxGq3zhFpLNMwwn+VOjC/MznY3kVV2DDx6Zdd0M
+ODBOYrmM8liZ0WjS66a/KkVa0Xz1c68r4MScFYOGpXqZTLSOOlqy/nSySGunCHpw
+xZBtHy6KIEN/NtAohaWEcA==

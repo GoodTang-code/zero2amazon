@@ -4,21 +4,41 @@ set -euo pipefail
 usage() {
   cat <<'EOF'
 Usage:
-  npm run auto_push "commit message" ["x.y.z"]
+  AUTO_PUSH_ENCRYPT_KEY="your-secret" npm run auto_push "commit message" ["x.y.z"]
+  npm run auto_push "your-secret" "commit message" ["x.y.z"]
 
 Example:
-  npm run auto_push "update pre-writing flow" "1.0.0"
-  npm run auto_push "update pre-writing flow"
+  AUTO_PUSH_ENCRYPT_KEY="my-secret" npm run auto_push "update pre-writing flow" "1.0.0"
+  AUTO_PUSH_ENCRYPT_KEY="my-secret" npm run auto_push "update pre-writing flow"
+  npm run auto_push "my-secret" "update pre-writing flow" "1.0.0"
+  npm run auto_push "my-secret" "update pre-writing flow"
 EOF
 }
 
-if [[ $# -lt 1 || $# -gt 2 ]]; then
+if [[ $# -lt 1 || $# -gt 3 ]]; then
   usage
   exit 1
 fi
 
-COMMIT_MSG="$1"
-NEW_VERSION="${2:-}"
+SECRET_ARG=""
+COMMIT_MSG=""
+NEW_VERSION=""
+
+if [[ -n "${AUTO_PUSH_ENCRYPT_KEY:-}" ]]; then
+  # Env mode: args are commit [version]
+  COMMIT_MSG="${1:-}"
+  NEW_VERSION="${2:-}"
+else
+  # Arg mode: args are secret commit [version]
+  if [[ $# -lt 2 ]]; then
+    usage
+    exit 1
+  fi
+  SECRET_ARG="$1"
+  COMMIT_MSG="$2"
+  NEW_VERSION="${3:-}"
+  AUTO_PUSH_ENCRYPT_KEY="$SECRET_ARG"
+fi
 
 if [[ -n "$NEW_VERSION" ]] && [[ ! "$NEW_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
   echo "Error: version must be in x.y.z format (received: $NEW_VERSION)" >&2
@@ -33,6 +53,16 @@ fi
 CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 if [[ -z "$CURRENT_BRANCH" || "$CURRENT_BRANCH" == "HEAD" ]]; then
   echo "Error: detached HEAD is not supported for auto_push." >&2
+  exit 1
+fi
+
+if ! command -v openssl >/dev/null 2>&1; then
+  echo "Error: openssl is required but not found." >&2
+  exit 1
+fi
+
+if [[ -z "${AUTO_PUSH_ENCRYPT_KEY:-}" ]]; then
+  echo "Error: AUTO_PUSH_ENCRYPT_KEY is required for encrypting process files." >&2
   exit 1
 fi
 
@@ -77,12 +107,40 @@ if [[ -n "$NEW_VERSION" ]]; then
   fi
 fi
 
+ENCRYPT_MARKER="__AUTO_PUSH_ENCRYPTED_V1__"
+ENCRYPT_TARGETS=(
+  "00_process/00_start.md"
+  "00_process/01_setup.md"
+  "00_process/02_pre_writing.md"
+  "00_process/03_writing.md"
+)
+
+for f in "${ENCRYPT_TARGETS[@]}"; do
+  if [[ ! -f "$f" ]]; then
+    echo "Error: encryption target not found: $f" >&2
+    exit 1
+  fi
+
+  first_line="$(head -n 1 "$f" || true)"
+  if [[ "$first_line" == "$ENCRYPT_MARKER" ]]; then
+    echo "Skip encrypt (already encrypted): $f"
+    continue
+  fi
+
+  tmp="${f}.enc.tmp"
+  {
+    echo "$ENCRYPT_MARKER"
+    openssl enc -aes-256-cbc -pbkdf2 -salt -base64 \
+      -pass env:AUTO_PUSH_ENCRYPT_KEY \
+      -in "$f"
+  } > "$tmp"
+  mv "$tmp" "$f"
+  echo "Encrypted: $f"
+done
+
 git add \
   README.md \
-  00_process/00_start.md \
-  00_process/01_setup.md \
-  00_process/02_pre_writing.md \
-  00_process/03_writing.md \
+  "${ENCRYPT_TARGETS[@]}" \
   script/ \
   note/
 

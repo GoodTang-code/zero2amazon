@@ -1,257 +1,103 @@
-# STEP 00 — PROJECT SETUP
-
-## Objective
-Prepare the project structure and establish the **single source of truth** for the novel.
-
-This step ensures the agent has a clean workspace and a stable foundation before any creative work begins.
-
----
-
-## Task 1 — Create Folder Structure
-
-Create the following folders if they do not exist:
-
-00_process/
-01_story_bible/
-02_premise/
-03_characters/
-04_world_rules/
-05_plot/
-06_chapter_blueprints/
-07_manuscript/
-99_exports/
-
-Do NOT delete existing content.
-
----
-
-## Task 2 — Initialize Story Bible
-
-Create the following files inside `01_story_bible/`:
-
-story_overview.md  
-mood_tone_style.md  
-writing_rules.md  
-glossary.md  
-timeline_master.md  
-
-### Purpose
-
-**story_overview.md**
-→ high-level summary & direction
-
-**mood_tone_style.md**
-→ emotional atmosphere & stylistic guidance
-
-**writing_rules.md**
-→ readability, pacing, stylistic constraints
-
-**glossary.md**
-→ terminology & naming consistency
-
-**timeline_master.md**
-→ chronological continuity reference
-
----
-
-## Task 3 — Initialize Process Logs
-
-Create these files if missing:
-
-00_process/decision_log.md  
-00_process/scoring_log.md  
-
-### Purpose
-
-decision_log.md
-→ record major creative decisions
-
-scoring_log.md
-→ record evaluation results & quality checks
-
----
-
-## Task 4 — Define Story Bible Authority
-
-Add the following rule to `01_story_bible/story_overview.md`:
-
-> This folder is the SINGLE SOURCE OF TRUTH for the novel.  
-> All writing must remain consistent with its contents.  
-> If conflicts occur, update the bible before revising drafts.
-
----
-
-## Task 5 — Create Master Progress Checklist
-
-Create a progress tracking file:
-
-00_process/project_progress.md
-
-This file will be used throughout the entire project lifecycle.
-
-It tracks:
-- completed stages
-- current step
-- revision status
-- overall progress
-- word count milestones (synced from `00_process/word_count_log.md`)
-
----
-
-### Initialize the file with the following structure:
-
-# Project Progress Tracker
-
-## Current Stage
-Setup
-
-## Overall Progress
-0%
-
----
-
-## Stage Status
-
-### Setup
-- [ ] Folder structure created
-- [ ] Story bible initialized
-- [ ] Process logs created
-- [ ] Authority rule inserted
-- [ ] Progress tracker created
-
-### Premise Engine
-- [ ] 100 what-if seeds generated
-- [ ] top premises selected
-- [ ] premise stress tested
-- [ ] promise of premise finalized
-
-### Story Bible Development
-- [ ] mood & tone defined
-- [ ] writing rules defined
-- [ ] glossary initialized
-- [ ] timeline master created
-
-### Character Architecture
-- [ ] main characters created
-- [ ] supporting characters created
-- [ ] relationship map completed
-- [ ] character arcs defined
-
-### World & Rules
-- [ ] world overview completed
-- [ ] system rules defined
-- [ ] constraints & costs defined
-- [ ] loopholes stress-tested
-
-### Plot Architecture
-- [ ] core plot arc completed
-- [ ] escalation ladder defined
-- [ ] twist bank created
-- [ ] chapter blueprint completed
-
-### Drafting
-- [ ] draft structure ready
-- [ ] act I written
-- [ ] act II written
-- [ ] act III written
-- [ ] full draft completed
-- [ ] word count updated after each drafting session
-
-### Revision
-- [ ] structural revision
-- [ ] pacing revision
-- [ ] consistency pass
-- [ ] tone & style pass
-- [ ] final polish
-- [ ] word count delta updated after each revision pass
-
-### Production
-- [ ] manuscript formatted
-- [ ] EPUB generated
-- [ ] metadata prepared
-- [ ] cover ready
-- [ ] Amazon checklist completed
-
----
-
-## Revision Log
-(empty)
-
----
-
-## Notes
-(empty)
-
----
-
-## Task 6 — Create Word Count Tracker
-
-Create this file if missing:
-
-00_process/word_count_log.md
-
-### Purpose
-
-Track writing throughput and progress toward the 80,000-word target.
-
-### Initialize the file with the following structure:
-
-# Word Count Log
-
-## Target
-80,000 words
-
-## Current Total
-0
-
-## Entries
-| Date | Stage | File/Section | Words Added | Words Removed | Net | Running Total | Notes |
-|---|---|---|---:|---:|---:|---:|---|
-
----
-
-### Update Rules
-
-The agent must update `00_process/project_progress.md` after completing any stage.
-
-- Mark completed tasks
-- Update current stage
-- Update overall progress %
-- Add revision notes if required
-- Sync progress status with latest `00_process/word_count_log.md` totals
-
-The agent must update `00_process/word_count_log.md` after each writing/revision session in `07_manuscript/`.
-
-`00_process/project_progress.md` serves as the master progress dashboard.
-
----
-
-## Validation Checklist
-
-Agent must verify:
-
-- Folder structure exists
-- Story bible files created
-- Process logs created
-- Word count tracker created
-- No existing files overwritten
-- Authority rule inserted
-
----
-
-## Output Format (Required)
-
-After completion, output:
-
-[STEP COMPLETED]  
-Step: Setup  
-Status: PASS | REVISION REQUIRED  
-
-Files created/updated:
-- …
-
-Issues:
-- …
-
-Next step:
-- Premise Engine (Step 01)
+__AUTO_PUSH_ENCRYPTED_V1__
+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

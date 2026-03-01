@@ -8,10 +8,12 @@ Stage 4
 Characters
 Stage 5
 Plot Escalation
-👉 นี่คือ pipeline มืออาชีพจริง
+👉 the professional pipeline
 
 AI workflow:
-
 Draft → revise loops → consistency check →
 👉 generate FINAL MANUSCRIPT →
 format → EPUB → publish
+
+# auto push with encrypt
+AUTO_PUSH_ENCRYPT_KEY="your-secret" npm run auto_push "commit" "0.0.1"
