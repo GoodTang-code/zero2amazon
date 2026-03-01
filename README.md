@@ -178,12 +178,12 @@ Zero-2-Amazon/
 ---
 
 ## 🔐 Encrypted Process Notice
-โฟลเดอร์ `00_process` (ไฟล์ process หลัก) ถูกเข้ารหัส
-กรุณาขอ `ยฟหหแนกำ` จาก owner ก่อนใช้งาน
+โฟลเดอร์ `00_process` (ไฟล์ process หลัก) ถูกเข้ารหัสไว้
+กรุณาขอ `secret-key` จาก owner ก่อนใช้งาน
 
 ### วิธี Decrypt
 ```bash
-bash script/decrypt_process.sh "your-secret"
+bash script/decrypt_process.sh "secret-key"
 ```
 
 หลังถอดรหัสสำเร็จ ให้เริ่มงานตาม flow ได้ตามปกติ

@@ -4,14 +4,18 @@ set -euo pipefail
 usage() {
   cat <<'EOF'
 Usage:
-  AUTO_PUSH_ENCRYPT_KEY="your-secret" npm run auto_push "commit message" ["x.y.z"]
-  npm run auto_push "your-secret" "commit message" ["x.y.z"]
+  AUTO_PUSH_ENCRYPT_KEY="your-secret" npm run auto_push -- "commit message" ["increment"]
+  npm run auto_push -- "your-secret" "commit message" ["increment"]
 
 Example:
-  AUTO_PUSH_ENCRYPT_KEY="my-secret" npm run auto_push "update pre-writing flow" "1.0.0"
-  AUTO_PUSH_ENCRYPT_KEY="my-secret" npm run auto_push "update pre-writing flow"
-  npm run auto_push "my-secret" "update pre-writing flow" "1.0.0"
-  npm run auto_push "my-secret" "update pre-writing flow"
+  AUTO_PUSH_ENCRYPT_KEY="my-secret" npm run auto_push -- "update pre-writing flow" "0.0.1"
+  AUTO_PUSH_ENCRYPT_KEY="my-secret" npm run auto_push -- "update pre-writing flow"
+  npm run auto_push -- "my-secret" "update pre-writing flow" "0.1.0"
+  npm run auto_push -- "my-secret" "update pre-writing flow"
+
+Note:
+  increment is semver delta, not absolute version.
+  latest v0.9.0 + increment 0.0.1 => new tag v0.9.1
 EOF
 }
 
@@ -72,35 +76,34 @@ normalize_tag_version() {
   echo "$t"
 }
 
-version_gt() {
-  local a="$1"
-  local b="$2"
-  IFS='.' read -r a1 a2 a3 <<< "$a"
-  IFS='.' read -r b1 b2 b3 <<< "$b"
-  (( a1 > b1 )) && return 0
-  (( a1 < b1 )) && return 1
-  (( a2 > b2 )) && return 0
-  (( a2 < b2 )) && return 1
-  (( a3 > b3 )) && return 0
-  return 1
+add_versions() {
+  local base="$1"
+  local inc="$2"
+  local b1 b2 b3 i1 i2 i3
+  IFS='.' read -r b1 b2 b3 <<< "$base"
+  IFS='.' read -r i1 i2 i3 <<< "$inc"
+  echo "$((b1 + i1)).$((b2 + i2)).$((b3 + i3))"
 }
 
 NEW_TAG=""
 if [[ -n "$NEW_VERSION" ]]; then
+  if [[ "$NEW_VERSION" == "0.0.0" ]]; then
+    echo "Error: increment cannot be 0.0.0." >&2
+    exit 1
+  fi
+
   LATEST_TAG="$(git tag --sort=-v:refname | head -n 1 || true)"
+  LATEST_VER="0.0.0"
   if [[ -n "$LATEST_TAG" ]]; then
     LATEST_VER="$(normalize_tag_version "$LATEST_TAG")"
     if ! [[ "$LATEST_VER" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
       echo "Error: latest tag '$LATEST_TAG' is not semver-compatible." >&2
       exit 1
     fi
-    if ! version_gt "$NEW_VERSION" "$LATEST_VER"; then
-      echo "Error: new version ($NEW_VERSION) must be greater than latest tag ($LATEST_TAG)." >&2
-      exit 1
-    fi
   fi
 
-  NEW_TAG="v$NEW_VERSION"
+  NEXT_VER="$(add_versions "$LATEST_VER" "$NEW_VERSION")"
+  NEW_TAG="v$NEXT_VER"
   if git rev-parse "$NEW_TAG" >/dev/null 2>&1; then
     echo "Error: tag '$NEW_TAG' already exists." >&2
     exit 1
