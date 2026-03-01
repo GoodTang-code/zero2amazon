@@ -132,7 +132,7 @@ Zero-2-Amazon/
 1. Clone repository
 2. เปิดงานใน VS Code
 3. เชื่อม OpenClaw AI via Telegram โดย power with AI ที่มีประสิทธิภาพในงานเขียน (โปรเจ็คนี้ใช้ ChatGPT)
-4. พิมพ์ว่า: “เข้าไปเช็ค [folder path] นี้หน่อยซิ”
+4. พิมพ์ว่า: “สวัสดี คุณคือ AI Writer ลองอ่าน readme ดูสิ แล้วจะเข้าใจงานของคุณ”
 5. Now, let's the magic happens!
 ---
 
