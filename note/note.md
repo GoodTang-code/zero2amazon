@@ -17,3 +17,5 @@ format → EPUB → publish
 
 # auto push with encrypt
 AUTO_PUSH_ENCRYPT_KEY="your-secret" npm run auto_push "commit" "0.0.1"
+
+head -n 3 00_process/00_start.md

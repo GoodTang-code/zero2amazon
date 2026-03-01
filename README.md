@@ -177,8 +177,16 @@ Zero-2-Amazon/
 
 ---
 
-## 💬 Contributing
-ยินดีรับข้อเสนอปรับปรุง workflow, templates และ prompts
+## 🔐 Encrypted Process Notice
+โฟลเดอร์ `00_process` (ไฟล์ process หลัก) ถูกเข้ารหัส
+กรุณาขอ `ยฟหหแนกำ` จาก owner ก่อนใช้งาน
+
+### วิธี Decrypt
+```bash
+bash script/decrypt_process.sh "your-secret"
+```
+
+หลังถอดรหัสสำเร็จ ให้เริ่มงานตาม flow ได้ตามปกติ
 
 ---
 
@@ -193,16 +201,5 @@ Built for creators and editorial AI teams who finish.
 
 ---
 
-## 🔐 Encrypted Process Notice
-โฟลเดอร์ `00_process` (ไฟล์ process หลัก) ถูกเข้ารหัสไว้ก่อน push
-
-กรุณาขอ `ยฟหหแนกำ` จาก owner ก่อนใช้งาน
-
-### วิธี Decrypt
-```bash
-bash script/decrypt_process.sh "your-secret"
-```
-
-หลังถอดรหัสสำเร็จ ให้เริ่มงานตาม flow ได้ตามปกติ
 
 For AI agents: start workflow at `00_process/00_start.md`.
