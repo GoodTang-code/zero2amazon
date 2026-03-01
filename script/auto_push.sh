@@ -162,6 +162,29 @@ if [[ -n "$NEW_TAG" ]]; then
   git push origin "$NEW_TAG"
 fi
 
+# Restore local working files to plaintext after successful push.
+for f in "${ENCRYPT_TARGETS[@]}"; do
+  if [[ ! -f "$f" ]]; then
+    echo "Warning: decrypt skipped, target not found: $f" >&2
+    continue
+  fi
+
+  first_line="$(head -n 1 "$f" || true)"
+  if [[ "$first_line" != "$ENCRYPT_MARKER" ]]; then
+    echo "Skip local decrypt (already plaintext): $f"
+    continue
+  fi
+
+  tmp="${f}.dec.tmp"
+  if tail -n +2 "$f" | openssl enc -d -aes-256-cbc -pbkdf2 -a -pass env:AUTO_PUSH_ENCRYPT_KEY > "$tmp"; then
+    mv "$tmp" "$f"
+    echo "Local decrypted: $f"
+  else
+    rm -f "$tmp"
+    echo "Warning: failed to decrypt $f after push (check key)." >&2
+  fi
+done
+
 echo "Done:"
 echo "- branch: $CURRENT_BRANCH"
 echo "- commit: $COMMIT_MSG"

@@ -16,7 +16,7 @@ Draft → revise loops → consistency check →
 format → EPUB → publish
 
 # auto push with encrypt
-AUTO_PUSH_ENCRYPT_KEY="your-secret" npm run auto_push -- "update:decrypt process" "1.0.0"
+AUTO_PUSH_ENCRYPT_KEY=`*/\*` npm run auto_push -- "update:decrypt process" "1.0.0"
 
 
 head -n 3 00_process/00_start.md
