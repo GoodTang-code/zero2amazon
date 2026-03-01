@@ -69,6 +69,7 @@ if [[ -z "${AUTO_PUSH_ENCRYPT_KEY:-}" ]]; then
   echo "Error: AUTO_PUSH_ENCRYPT_KEY is required for encrypting process files." >&2
   exit 1
 fi
+export AUTO_PUSH_ENCRYPT_KEY
 
 normalize_tag_version() {
   local t="$1"

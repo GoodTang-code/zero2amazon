@@ -13,7 +13,7 @@ if [[ $# -ne 1 ]]; then
   exit 1
 fi
 
-AUTO_PUSH_ENCRYPT_KEY="$1"
+export AUTO_PUSH_ENCRYPT_KEY="$1"
 ENCRYPT_MARKER="__AUTO_PUSH_ENCRYPTED_V1__"
 
 TARGETS=(
